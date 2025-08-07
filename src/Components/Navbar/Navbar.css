@@ -43,7 +43,6 @@
   width: 100px;
   height: 100vh;
   background: transparent;
-  /* color: #ffffff; */
   color: var(--text-color);
   display: flex;
   flex-direction: column;
@@ -64,7 +63,6 @@
 .sidebar__icon {
   font-size: 2rem;
   cursor: pointer;
-  /* color: #ffffff; */
   color: var(--text-color);
 }
 
@@ -210,13 +208,11 @@
   font-weight: 400; /* 400 is Regular */
   letter-spacing: 0.8px;
   word-spacing: 1.3px;
-  /* font-size: x-large; */
 }
 .email-link {
   font-size: 30px;
 
   text-transform: uppercase;
-  /* color: #ffffff; */
   color: var(--text-color);
 
   text-decoration: none;
@@ -233,12 +229,10 @@
 .phone-info {
   font-weight: 600;
   font-size: 1.1rem;
-  /* color: #ffffff; */
   color: var(--text-color);
 }
 
 .number {
-  /* color: aliceblue; */
   color: var(--text-color);
 
   margin-bottom: 3.3rem;
@@ -253,7 +247,6 @@
 }
 
 .copyright {
-  /* color: #ffffff; */
   color: var(--text-color);
 
   font-size: 0.99rem;
@@ -269,7 +262,6 @@
   background: transparent;
   border: none;
   border-bottom: 0.25rem solid var(--text-color);
-  /* color: #fff; */
   color: var(--text-color);
 
   font-size: 1rem;
@@ -348,7 +340,6 @@ input::placeholder {
   gap: 0.25rem;
   user-select: none;
   z-index: 2000;
-  /* box-shadow: 0 4px 12px rgba(0,0,0,0.4); */
   height: 7rem;
   width: 8rem;
   transform: rotate(180deg);
@@ -359,7 +350,6 @@ input::placeholder {
 
   font-weight: 700; /* Semi Bold */
   font-family: var(--tertiory-font);
-  /* padding-top: 7rem; */
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {

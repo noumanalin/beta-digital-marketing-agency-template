@@ -6,6 +6,7 @@ import "@fontsource/montserrat/500.css";
 import { BsArrowUpRight } from "react-icons/bs";
 import arrowDown from "../../assets/arrow-down.png";
 import TypingText from "./TypingText";
+import { delay } from "framer-motion/dom";
  
 const DigitalAgency = () => {
   const [count, setCount] = useState(0);
@@ -51,7 +52,7 @@ const DigitalAgency = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 1, delay:.4,ease: 'easeOut' },
     },
   };
 
@@ -60,7 +61,7 @@ const DigitalAgency = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 1,delay :.4, ease: 'easeOut' },
     },
   };
 
