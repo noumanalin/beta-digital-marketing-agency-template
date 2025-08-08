@@ -1,0 +1,12 @@
+.work-heading-container {
+  z-index: 0;
+}
+
+.images-container {
+  position: relative;
+  z-index: 10; /* Images on top */
+}
+
+.work-image-item img {
+  display: block;
+}
