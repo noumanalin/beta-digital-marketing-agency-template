@@ -6,6 +6,10 @@ import Scrollinfinite from "../../Components/Scrollinfinite/Scrollinfinite";
 import WorkShowcase from "../../components/Work image gallery/WorkShowcase";
 import Work from "../../components/How we work/work";
 import Brands from "../../components/Brands/Brands";
+import '../../styles/global.css';
+import Testimonials from "../../components/Testimonials";
+import NewsInsight from "../../components/NewsInsight";
+import WorkWithUs from "../../components/WorkWithUs";
 
 const Home = () => {
   return (
@@ -17,6 +21,15 @@ const Home = () => {
       <Work/>
       <WorkShowcase/>
       <Brands/> 
+
+
+       <div className="App"> 
+      
+      <Testimonials />
+      <NewsInsight />
+      <WorkWithUs />
+       
+    </div>
     </main>
   );
 };

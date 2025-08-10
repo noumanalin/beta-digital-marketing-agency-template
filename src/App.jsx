@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 
 import { useEffect } from 'react';
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -16,10 +17,10 @@ function App() {
       <Navbar />
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
-          {/* future routes: <Route path="/about" element={<About />} /> */}
+          <Route path="/" element={<Home />} /> 
         </Routes>
       </div>
+      <Footer />
     </BrowserRouter>
     </>
   );
