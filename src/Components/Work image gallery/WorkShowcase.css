@@ -1,12 +1,51 @@
-.work-heading-container {
-  z-index: 0;
+section {
+  background-color: black;
+  color: white;
+  padding: 80px 0; /* same as py-20 */
+}
+
+section > div {
+  max-width: 1280px; /* same as max-w-7xl */
+  margin: 0 auto;
+  padding: 0 24px; /* px-6 */
+}
+
+.work-heading {
+  font-size: 3.75rem; /* same as text-6xl */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 64px; /* mb-16 */
+  position: sticky;
+  top: 96px; /* top-24 */
+  z-index: 20;
 }
 
 .images-container {
-  position: relative;
-  z-index: 10; /* Images on top */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px; /* gap-8 */
+}
+
+@media (min-width: 768px) {
+  .images-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.work-image-item {
+  width: 100%;
 }
 
 .work-image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* rounded-lg */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4); /* shadow-lg */
+  object-fit: cover;
   display: block;
+}
+
+/* Optional stagger for the right column like mt-20 */
+.mt-20 {
+  margin-top: 80px;
 }

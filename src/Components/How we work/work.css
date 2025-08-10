@@ -1,6 +1,173 @@
-/* src/components/work.css */
+/* SECTION BASE STYLES */
+.work-section {
+  position: relative;
+  padding: 80px 16px; /* py-20 px-4 */
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
 
-/* Custom animations for the background decorative elements */
+/* CONTAINER */
+.work-container {
+  max-width: 1280px; /* max-w-7xl */
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* SUBTITLE */
+.work-subtitle {
+  color: #9ca3af; /* gray-400 */
+  text-transform: uppercase;
+  letter-spacing: 0.15em; /* tracking-widest */
+  font-size: 0.875rem; /* text-sm */
+  margin-bottom: 8px;
+}
+
+/* MAIN TITLE */
+.work-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: bold;
+  margin-bottom: 64px; /* mb-16 */
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .work-title {
+    font-size: 3rem; /* sm:text-5xl */
+  }
+}
+
+@media (min-width: 1024px) {
+  .work-title {
+    font-size: 3.75rem; /* lg:text-6xl */
+  }
+}
+
+/* STEPS CONTAINER */
+.work-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .work-steps {
+    flex-direction: row;
+    gap: 16px; /* md:gap-4 */
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .work-steps {
+    gap: 32px; /* lg:gap-8 */
+  }
+}
+
+/* STEP CARD */
+.work-step {
+  position: relative;
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .work-step {
+    padding: 32px;
+  }
+}
+
+/* STEP NUMBER + DOT */
+.step-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 10;
+}
+
+.step-number {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 640px) {
+  .step-number {
+    font-size: 2.25rem; /* sm:text-4xl */
+  }
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #a3e635; /* lime-400 */
+  box-shadow: 0 0 6px #a3e635;
+  align-self: center;
+}
+
+/* WATERMARK NUMBER */
+.step-watermark {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  font-size: 8rem;
+  font-weight: 800;
+  color: #1f2937; /* gray-800 */
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .step-watermark {
+    font-size: 10rem;
+  }
+}
+
+/* STEP TITLE */
+.step-title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: bold;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .step-title {
+    font-size: 1.5rem; /* sm:text-2xl */
+  }
+}
+
+/* STEP DESCRIPTION */
+.step-desc {
+  color: #9ca3af; /* gray-400 */
+  font-size: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .step-desc {
+    font-size: 1.125rem; /* sm:text-lg */
+  }
+}
+
+/* BACKGROUND BLOBS */
 @keyframes blob {
   0% {
     transform: translate(0px, 0px) scale(1);
@@ -16,19 +183,37 @@
   }
 }
 
-.animate-blob {
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: blur(40px);
+  opacity: 0.2;
   animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.3, 0.9);
 }
 
-/* To stagger the animations if multiple blobs are used */
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-.animation-delay-4000 {
-  animation-delay: 4s;
+.blob-green {
+  background-color: #22c55e; /* green-500 */
+  top: 25%;
+  left: 0;
+  width: 256px;
+  height: 256px;
 }
 
-/* Ensure the font is applied if not globally set */
-body {
-  font-family: 'Inter', sans-serif;
+.blob-blue {
+  background-color: #3b82f6; /* blue-500 */
+  top: 50%;
+  right: 0;
+  width: 256px;
+  height: 256px;
+  animation-delay: 2s;
+}
+
+.blob-purple {
+  background-color: #8b5cf6; /* purple-500 */
+  bottom: 0;
+  left: 25%;
+  width: 256px;
+  height: 256px;
+  animation-delay: 4s;
 }
