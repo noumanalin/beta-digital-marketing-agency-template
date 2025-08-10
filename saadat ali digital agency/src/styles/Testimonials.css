@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  padding: 20px 0;
+  transition: background 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+}
+
+.logo-circle::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #666;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: white;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 120px 0;
+  min-height: 100vh;
+  position: relative;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+/* Main Layout - Photos on sides, content in center */
+.testimonials-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 80px;
+  align-items: center;
+  min-height: 70vh;
+}
+
+/* Left Side Photos */
+.left-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+
+/* Center Content */
+.center-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.section-tag {
+  color: #888;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-description {
+  color: #999;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 480px;
+  font-weight: 400;
+}
+
+/* Right Side Photo */
+.right-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Photo Cards */
+.photo-card {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.photo-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Individual Card Sizes and Positioning */
+.photo-card-1 {
+  width: 240px;
+  height: 300px;
+}
+
+.photo-card-2 {
+  width: 200px;
+  height: 240px;
+}
+
+.photo-card-3 {
+  width: 280px;
+  height: 350px;
+}
+
+/* Photo Overlay with Name */
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 40px 25px 25px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover .photo-overlay {
+  transform: translateY(0);
+}
+
+.person-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.person-role {
+  font-size: 13px;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-15px); 
+  }
+}
+
+.photo-card-1 {
+  animation: float 6s ease-in-out infinite;
+}
+
+.photo-card-2 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.photo-card-3 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+/* Recent Blog */
+.recent-blog {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #888;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.recent-blog:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .testimonials-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .left-photos {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .photo-card-1,
+  .photo-card-2,
+  .photo-card-3 {
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .testimonials {
+    padding: 100px 0;
+  }
+
+  .left-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-card-1,
+  .photo-card-2,
+  .photo-card-3 {
+    width: 250px !important;
+    height: 300px !important;
+  }
+
+  .center-content {
+    padding: 0 20px;
+  }
+
+  .recent-blog {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
