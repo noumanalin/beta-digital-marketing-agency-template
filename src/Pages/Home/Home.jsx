@@ -10,6 +10,9 @@ import '../../styles/global.css';
 import Testimonials from "../../components/Testimonials";
 import NewsInsight from "../../components/NewsInsight";
 import WorkWithUs from "../../components/WorkWithUs";
+import SolutionSection from "../../components/Services/services";
+import StatsSection from "../../components/Counter/counter";
+import WorkProcess from "../../components/Workflow/workflow";
 
 const Home = () => {
   return (
@@ -18,9 +21,16 @@ const Home = () => {
       <Hero />
       <Scrollinfinite />
  
+      {/* <WorkProcess/> */}
+      <SolutionSection/>
+      <StatsSection/>
+
       <Work/>
       <WorkShowcase/>
       <Brands/> 
+
+
+
 
 
        <div className="App"> 
