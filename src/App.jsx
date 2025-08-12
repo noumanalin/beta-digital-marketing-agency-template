@@ -4,8 +4,9 @@ import "./App.css";
 
 import Home from "./Pages/Home/Home";
 
-import Navbar from "./components/Navbar/Navbar";
+
 import Footer from "./components/Footer";
+import Navbar from './components/Navbar/Navbar'
 
 
 
@@ -13,8 +14,8 @@ function App() {
 
   return (
     <>
+    <Navbar />
     <BrowserRouter>
-      <Navbar />
       <div>
         <Routes>
           <Route path="/" element={<Home />} /> 
