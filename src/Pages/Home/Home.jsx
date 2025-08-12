@@ -1,8 +1,8 @@
 // IMPORT COMPONENTS HERE
 
 import React from "react";
-import Hero from "../../Components/Hero/Hero";
-import Scrollinfinite from "../../Components/Scrollinfinite/Scrollinfinite";
+import Hero from "../../components/Hero/Hero";
+import Scrollinfinite from "../../components/Scrollinfinite/Scrollinfinite";
 import WorkShowcase from "../../components/Work image gallery/WorkShowcase";
 import Work from "../../components/How we work/work";
 import Brands from "../../components/Brands/Brands";
