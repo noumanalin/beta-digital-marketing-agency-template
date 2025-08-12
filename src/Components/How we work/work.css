@@ -145,6 +145,7 @@
   margin-bottom: 8px;
   position: relative;
   z-index: 10;
+  color: white !important;
 }
 
 @media (min-width: 640px) {

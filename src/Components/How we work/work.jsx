@@ -29,7 +29,7 @@ const Work = () => {
                 <div className="step-dot"></div>
               </div>
               <span className="step-watermark">{step.stepNum}</span>
-              <h3 className="step-title">{step.title}</h3>
+              <h3 className="step-title text-white">{step.title}</h3>
               <p className="step-desc">{step.description}</p>
             </div>
           ))}

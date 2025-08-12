@@ -86,6 +86,7 @@
 
 .support-phone {
   text-align: end;
+  color: white !important;
   font-weight: bold;
   font-size: 1.2rem;
 }
