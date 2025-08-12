@@ -5,7 +5,7 @@ import { FiSearch } from "react-icons/fi";
 import logo from "../../assets/axtra-logo-light-2.webp";
 
 
-export default function Sidebar() { 
+export default function Navbar() { 
   const [menuState, setMenuState] = useState("closed"); // 'closed', 'opening', 'open', 'closing'
   const [showLinks, setShowLinks] = useState(false);
   const openTimeoutRef = useRef(null);
