@@ -10,13 +10,10 @@ import NewsInsight from "@/components/NewsInsight";
 import WorkWithUs from "@/components/WorkWithUs";
 import SolutionSection from "@/components/Services/Services";
 import StatsSection from "@/components/Counter/Counter";
-import WorkProcess from "@/components/Workflow/Workflow";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer";
+import WorkProcess from "@/components/Workflow/Workflow"; 
 
 const Home = () => {
-  return (<>
-    <Navbar/>
+  return (<> 
     <main className="w-full bg-gray-950">
       {/* <Main /> */}
       <Hero />
@@ -41,9 +38,7 @@ const Home = () => {
       <WorkWithUs />
        
     </div>
-    </main>
-
-    <Footer />
+    </main> 
       </>
   );
 };

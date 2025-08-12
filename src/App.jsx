@@ -4,6 +4,8 @@ import "./App.css";
 
 import Home from "./Pages/Home/Home";
 
+import Navbar from './components/Navbar/Navbar.jsx';
+import Footer from './components/Footer.jsx'
 
 
 
@@ -11,6 +13,7 @@ function App() {
 
   return (
     <> 
+    <Navbar/>
     <BrowserRouter>
       <div>
         <Routes>
@@ -18,6 +21,8 @@ function App() {
         </Routes>
       </div> 
     </BrowserRouter>
+
+    <Footer />
     </>
   );
 }
