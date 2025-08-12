@@ -14,8 +14,13 @@ import SolutionSection from "../../components/Services/services";
 import StatsSection from "../../components/Counter/counter";
 import WorkProcess from "../../components/Workflow/workflow";
 
+
+import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer'
+
 const Home = () => {
-  return (
+  return (<>
+    <Navbar/>
     <main className="w-full bg-gray-950">
       {/* <Main /> */}
       <Hero />
@@ -41,6 +46,9 @@ const Home = () => {
        
     </div>
     </main>
+
+    <Footer />
+      </>
   );
 };
 
